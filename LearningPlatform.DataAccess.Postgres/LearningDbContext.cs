@@ -16,12 +16,7 @@ namespace LearningPlatform.DataAccess.Postgres
         public DbSet<StudentEntity> Students { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new CourseConfiguration());
-            modelBuilder.ApplyConfiguration(new LessonConfiguration());
-            modelBuilder.ApplyConfiguration(new AuthorConfiguration());
-            modelBuilder.ApplyConfiguration(new StudentConfiguration());
-
+        {           
             base.OnModelCreating(modelBuilder);
         }
 
