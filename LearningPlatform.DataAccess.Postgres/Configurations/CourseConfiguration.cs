@@ -12,7 +12,8 @@ namespace LearningPlatform.DataAccess.Postgres.Configurations
 
             builder
                 .HasOne(c => c.Author)
-                .WithOne(a => a.Course);
+                .WithOne(a => a.Course)
+                .HasForeignKey<CourseEntity>(c => c.AuthorId);
 
             builder 
                 .HasMany(c => c.Lessons)

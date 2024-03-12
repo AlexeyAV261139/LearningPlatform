@@ -13,7 +13,7 @@ namespace LearningPlatform.DataAccess.Postgres.Configurations
             builder
                 .HasOne(l => l.Course)
                 .WithMany(c => c.Lessons)
-                .HasForeignKey(l => l.Course);                    
+                .HasForeignKey(l => l.CourseId);                    
         }
     }
 }
